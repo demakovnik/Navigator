@@ -1,4 +1,4 @@
-package ru.inofttech.navi;
+package ru.inofttech.navigator;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

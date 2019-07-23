@@ -1,4 +1,4 @@
-package ru.inofttech.navi;
+package ru.inofttech.navigator;
 import jssc.SerialPort;
 import jssc.SerialPortEvent;
 import jssc.SerialPortEventListener;

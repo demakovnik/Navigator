@@ -11,25 +11,25 @@ public class GGAField extends NMEAField {
     /**
      * Время UTC определения координат
     */
-    public String utcTime;
+    private String utcTime;
     /** Широта С/Ю*/
-    public String latitude;
+    private String latitude;
     /** Долгота З/В*/
-    public String longitude;
+    private String longitude;
     /** режим работы приемника*/
-    public String receiverMode;
+    private String receiverMode;
     /** число спутников участвующих в решении навигационной задачи*/
-    public String numberOfSatellites;
-    /** HDOP*/
-    public String hdop;
+    private String numberOfSatellites;
+    /** Снижение точности в горизонтальной плоскости*/
+    private String hdop;
     /**высота над средним уровнем моря, м*/
-    public String altitude;
+    private String altitude;
     /**высота над геоидом, м*/
-    public String heightAboveTheGeoid;
+    private String heightAboveTheGeoid;
     /**возраст дифференциальных поправок*/
-    public String ageOfDifferentialCorrections;
+    private String ageOfDifferentialCorrections;
     /**ID дифференциальной станции*/
-    public String iDofDifferentialStation;
+    private String iDofDifferentialStation;
 
     /**
      * Создает объект, представляющий поле GGA, зависящее от текстовых данных NMEA,
@@ -54,18 +54,21 @@ public class GGAField extends NMEAField {
             iDofDifferentialStation = matcher.group(15);
         }
     }
+
     /**
      * Возвращает время UTC
      */
     public String getUTCTime() {
         return utcTime;
     }
+
     /**
      * Возвращает Широту
      */
     public String getLatitude() {
         return latitude;
     }
+
     /**
      * Возвращает Долготу
      */
@@ -80,34 +83,37 @@ public class GGAField extends NMEAField {
         return receiverMode;
     }
 
+    /**
+     * Возвращает число спутников участвующих в решении навигационной задачи
+     */
     public String getNumberOfSatellites() {
         return numberOfSatellites;
     }
 
+    /**
+     * Возвращает снижение точности в горизонтальной плоскости
+     */
     public String getHDOP() {
         return hdop;
     }
 
+    /**Возвращает высоту над средним уровнем моря, м*/
     public String getAltitude() {
         return altitude;
     }
 
+    /**Возвращает высоту над геоидом, м*/
     public String getHeightAboveTheGeoid() {
         return heightAboveTheGeoid;
     }
 
+    /**Возвращает возраст дифференциальных поправок*/
     public String getAgeOfDifferentialCorrections() {
         return ageOfDifferentialCorrections;
     }
 
+    /**Возвращает ID дифференциальной станции*/
     public String getiDofDifferentialStation() {
         return iDofDifferentialStation;
     }
-
-
-
-
-
-
-
 }
